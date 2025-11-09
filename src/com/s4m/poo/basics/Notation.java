@@ -37,6 +37,6 @@ public class Notation {
     }
 
     public void afficher() {
-        System.out.println("Matière : " + matiere + "Coefficient : " + coef + "Note : " + note);
+        System.out.println("Matière : " + matiere + " || Coefficient : " + coef + " || Note : " + note);
     }
 }

@@ -20,10 +20,24 @@ public class TestEtudiant {
             System.out.println("\n Matière " + (i + 1) + ":");
             System.out.println("Nom de la matiére :");
             String matiere = sc.nextLine();
-            System.out.println("Coefficient :");
-            int coef = sc.nextInt();
-            System.out.println("Note :");
-            float note = sc.nextFloat();
+
+            int coef;
+            do {
+                System.out.println("Coefficient : ");
+                coef = sc.nextInt();
+                if (coef <= 0) {
+                    System.out.println("Erreur : le coefficient doit etre supérieur à 0");
+                }
+            } while (coef <= 0);
+
+            float note;
+            do {
+                System.out.println("Note :");
+                note = sc.nextFloat();
+                if (note < 0 || note > 20) {
+                    System.out.println("Erreur : la note doit etre entre 0 et 20");
+                }
+            } while (note < 0 || note > 20);
             sc.nextLine();
             etudiant.ajouterNotation(new Notation(matiere, coef, note));
         }
