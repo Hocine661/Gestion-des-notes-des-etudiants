@@ -66,7 +66,7 @@ public class Etudiant {
         System.out.println("\n Information de l'étudiant :");
         System.out.println("Nom :" + this.nom);
         for (Notation n : this.notations) {
-            System.out.println(n.getMatiere() + ", Coef :" + n.getCoef() +", Note :" + n.getNote());
+            n.afficher();
         }
         System.out.println("Moyenne :" + this.moyenne);
         System.out.println("Avis :" + this.avis);
